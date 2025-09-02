@@ -1,0 +1,656 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skill Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #1c1c1e;
+  color: #d1d1d6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(40, 40, 46, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+.glass:hover {
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+header h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+}
+header div {
+  display: flex;
+  gap: 8px;
+}
+header button {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  color: #d1d1d6;
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: background 0.2s ease;
+}
+header button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+header button.clear-btn {
+  background: rgba(255, 99, 71, 0.2);
+}
+header button.clear-btn:hover {
+  background: rgba(255, 99, 71, 0.4);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+th, td {
+  padding: 10px;
+  text-align: right;
+  color: #d1d1d6;
+  font-size: 0.85rem;
+}
+th {
+  font-weight: 500;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+tr:last-child td {
+  border-bottom: none;
+}
+td ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+td ul li a {
+  color: #d1d1d6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+td ul li a:hover {
+  color: #ffffff;
+}
+
+/* Inputs */
+input[type=text], select {
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  outline: none;
+  background: rgba(50, 50, 56, 0.4);
+  color: #d1d1d6;
+  font-family: 'Vazirmatn', sans-serif;
+  transition: background 0.2s ease;
+}
+input[type=text]:focus, select:focus {
+  background: rgba(60, 60, 66, 0.5);
+}
+
+/* Star Rating */
+.star-rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  font-size: 1.2rem;
+  color: #8e8e93;
+}
+.star-rating input {
+  display: none;
+}
+.star-rating label {
+  cursor: pointer;
+  padding: 0 2px;
+}
+.star-rating label:before {
+  content: '\2606'; /* Empty star */
+}
+.star-rating input:checked ~ label:before,
+.star-rating label:hover:before,
+.star-rating label:hover ~ label:before {
+  content: '\2605'; /* Filled star */
+  color: #ffd700; /* Gold color */
+}
+
+/* Number Input */
+input[type=number] {
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  outline: none;
+  background: rgba(50, 50, 56, 0.4);
+  color: #d1d1d6;
+  width: 50px;
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: rgba(40, 40, 46, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.close-modal {
+  float: left;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #d1d1d6;
+  transition: color 0.2s ease;
+}
+.close-modal:hover {
+  color: #ffffff;
+}
+pre {
+  direction: ltr;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: monospace;
+  color: #d1d1d6;
+}
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+pre::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.75rem;
+  color: #8e8e93;
+  margin-top: auto;
+  background: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer a {
+  color: #d1d1d6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+footer a:hover {
+  color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Skill Tracker</h2>
+  <div>
+    <button id="btnHelp">راهنما</button>
+    <button id="btnSampleJson">دانلود نمونه JSON</button>
+    <button id="btnExport">خروجی JSON</button>
+    <button id="btnImport">ورود JSON</button>
+    <button id="btnClearStorage" class="clear-btn">حذف داده‌ها</button>
+    <input type="file" id="fileImport" style="display:none;">
+  </div>
+</header>
+
+<div class="glass">
+  <input type="text" id="searchInput" placeholder="جستجو...">
+  <select id="filterCategory"><option value="">فیلتر دسته‌بندی</option></select>
+  <select id="filterLevel">
+    <option value="">فیلتر سطح</option>
+    <option value="Junior">Junior</option>
+    <option value="Mid">Mid</option>
+    <option value="Mid/Senior">Mid/Senior</option>
+    <option value="Senior">Senior</option>
+  </select>
+  <select id="sortBy">
+    <option value="">مرتب‌سازی</option>
+    <option value="priority">بر اساس اولویت</option>
+    <option value="incomplete">تکمیل نشده اول</option>
+    <option value="stars">بر اساس ستاره</option>
+    <option value="reviews">بر اساس دفعات مرور</option>
+  </select>
+
+  <table id="skillsTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Category</th>
+        <th>Skill</th>
+        <th>Level</th>
+        <th>Resources</th>
+        <th>Completed</th>
+        <th>Stars (1-5)</th>
+        <th>Reviews</th>
+        <th>Priority</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<footer>
+  ساخته شده با ❤️ | <a href="https://github.com/your-repo/skill-tracker" target="_blank">GitHub</a>
+</footer>
+
+<div class="modal" id="helpModal">
+  <div class="modal-content glass">
+    <span class="close-modal" id="closeHelp">&times;</span>
+    <h3>راهنما</h3>
+    <h4>درباره Skill Tracker</h4>
+    <p>
+      Skill Tracker یک ابزار اپن‌سورس برای مدیریت و پیگیری مهارت‌های شماست. این پروژه در 
+      <a href="https://github.com/your-repo/skill-tracker" target="_blank">GitHub</a> 
+      منتشر شده و فایل‌های JSON متنوعی توسط مشارکت‌کنندگان در این مخزن برای استفاده شما قرار داده شده است. 
+      برای مشاهده و دانلود این فایل‌ها، به ریپازیتوری پروژه مراجعه کنید.
+    </p>
+    <h4>ذخیره‌سازی داده‌ها</h4>
+    <p>
+      تمام اطلاعات در <strong>LocalStorage</strong> مرورگر شما ذخیره می‌شود. این یعنی داده‌ها روی دستگاه شما باقی می‌مانند، 
+      اما ممکن است با پاک کردن حافظه مرورگر از بین بروند. برای جلوگیری از از دست رفتن اطلاعات، حتماً نسخه پشتیبان تهیه کنید.
+    </p>
+    <h4>وارد کردن و صادر کردن JSON</h4>
+    <p>
+      می‌توانید داده‌های خود را به‌صورت فایل JSON ذخیره کرده یا فایل‌های جدید وارد کنید. 
+      <strong>توجه:</strong> وارد کردن فایل JSON جدید، تمام داده‌های قبلی را حذف می‌کند. 
+      حتماً قبل از ورود فایل جدید، از طریق گزینه «خروجی JSON» یک نسخه پشتیبان تهیه کنید.
+    </p>
+    <h4>ساختار فایل JSON</h4>
+    <p>فایل JSON باید آرایه‌ای از آبجکت‌ها باشد. هر آبجکت باید شامل فیلدهای زیر باشد:</p>
+    <ul>
+      <li><strong>category</strong>: رشته، نام دسته‌بندی مهارت (مثال: "PHP & OOP").</li>
+      <li><strong>skill</strong>: رشته، نام مهارت (مثال: "OOP Principles").</li>
+      <li><strong>level</strong>: یکی از "Junior", "Mid", "Mid/Senior", "Senior".</li>
+      <li><strong>resources</strong>: آرایه‌ای از آبجکت‌ها، هر کدام با "title" (رشته) و "url" (رشته) (مثال: [{"title": "📘 Laravel Docs", "url": "https://laravel.com/docs"}]).</li>
+      <li><strong>completed</strong>: بولین، false یا true (توسط سیستم پر می‌شود).</li>
+      <li><strong>stars</strong>: عدد بین 0 تا 5 (توسط سیستم پر می‌شود).</li>
+      <li><strong>reviews</strong>: عدد بین 0 تا 99 (توسط سیستم پر می‌شود).</li>
+      <li><strong>priority</strong>: یکی از "Essential", "Important", "Advanced".</li>
+    </ul>
+    <h4>نمونه JSON</h4>
+    <pre>
+[
+  {
+    "category": "PHP & OOP",
+    "skill": "OOP Principles (Class, Inheritance, Interfaces, Traits)",
+    "level": "Mid",
+    "resources": [{"title": "📘 Laravel Docs", "url": "https://laravel.com/docs"}, {"title": "📹 Tutorial", "url": "https://youtube.com"}],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  }
+]
+    </pre>
+    <h4>نکات مهم برای JSON</h4>
+    <p>
+      - مطمئن شوید که ساختار JSON معتبر است. می‌توانید از ابزارهای آنلاین مانند JSONLint برای بررسی استفاده کنید.<br>
+      - برای دانلود نمونه‌های آماده JSON، به 
+      <a href="https://github.com/your-repo/skill-tracker" target="_blank">ریپازیتوری GitHub</a> مراجعه کنید.
+    </p>
+    <h4>پرومپت برای Grok</h4>
+    <p>می‌توانید از این پرومپت آماده برای درخواست از Grok (یا مدل‌های مشابه) استفاده کنید تا فایل JSON مهارت‌های مورد نیاز را برای شما بسازد:</p>
+    <pre>
+Create a JSON file for the Skill Tracker app. The structure is an array of objects with English keys: 
+- category: string (e.g., "PHP & OOP")
+- skill: string (e.g., "OOP Principles")
+- level: one of "Junior", "Mid", "Mid/Senior", "Senior"
+- resources: array of objects with "title" (string) and "url" (string) (e.g., [{"title": "📘 Laravel Docs", "url": "https://laravel.com/docs"}])
+- completed: boolean (false by default)
+- stars: number (0 by default)
+- reviews: number (0 by default)
+- priority: one of "Essential", "Important", "Advanced"
+
+Populate it with skills required for a Laravel developer from Junior to Senior level to get hired, based on industry standards. Include at least 20 skills, categorized appropriately, with relevant resources (use real URLs where possible).
+    </pre>
+    <p>این پرومپت را کپی کنید و به Grok بدهید تا JSON سفارشی بسازد. سپس آن را وارد اپ کنید.</p>
+  </div>
+</div>
+
+<script>
+let skills = [
+  {
+    "category": "PHP & OOP",
+    "skill": "OOP Principles (Class, Inheritance, Interfaces, Traits)",
+    "level": "Mid",
+    "resources": [{"title": "📘 Laravel Docs", "url": "https://laravel.com/docs"}, {"title": "📹 Laravel Tutorial", "url": "https://youtube.com"}],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "PHP & OOP",
+    "skill": "SOLID Principles",
+    "level": "Senior",
+    "resources": [{"title": "📘 Laravel Docs", "url": "https://laravel.com/docs"}, {"title": "📹 Laravel Tutorial", "url": "https://youtube.com"}],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "PHP & OOP",
+    "skill": "Design Patterns (Repository, Factory, Strategy, Observer…)",
+    "level": "Senior",
+    "resources": [{"title": "📘 Laravel Docs", "url": "https://laravel.com/docs"}, {"title": "📹 Laravel Tutorial", "url": "https://youtube.com"}],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  }
+];
+
+const STORAGE_KEY = "skillsData";
+const tableBody = document.querySelector("#skillsTable tbody");
+const searchInput = document.getElementById("searchInput");
+const filterCategory = document.getElementById("filterCategory");
+const filterLevel = document.getElementById("filterLevel");
+const sortBy = document.getElementById("sortBy");
+
+const priorityOrder = { "Essential": 1, "Important": 2, "Advanced": 3 };
+
+function loadFromLocal() {
+  const data = localStorage.getItem(STORAGE_KEY);
+  if (data) {
+    skills = JSON.parse(data);
+    skills = skills.map(skill => ({
+      ...skill,
+      "completed": Boolean(skill["completed"]),
+      "stars": Number(skill["stars"]) || 0,
+      "reviews": Number(skill["reviews"]) || 0
+    }));
+  }
+  renderTable();
+  updateCategoryOptions();
+}
+function saveToLocal() { localStorage.setItem(STORAGE_KEY, JSON.stringify(skills)); }
+
+function parseSources(resources) {
+  if (!Array.isArray(resources)) resources = [];
+  return resources.map(res => `<li><a href="${res.url}" target="_blank">${res.title}</a></li>`).join("");
+}
+
+function renderTable() {
+  let filtered = skills.filter(skill => {
+    const searchValue = searchInput.value.toLowerCase();
+    const categoryValue = filterCategory.value;
+    const levelValue = filterLevel.value;
+    let matchSearch = skill.skill?.toLowerCase().includes(searchValue) || false;
+    let matchCat = categoryValue === "" || skill.category === categoryValue;
+    let matchLevel = levelValue === "" || skill.level === levelValue;
+    return matchSearch && matchCat && matchLevel;
+  });
+
+  const sortValue = sortBy.value;
+  if (sortValue === "priority") {
+    filtered.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
+  } else if (sortValue === "incomplete") {
+    filtered.sort((a, b) => (a.completed ? 1 : -1) - (b.completed ? 1 : -1));
+  } else if (sortValue === "stars") {
+    filtered.sort((a, b) => b.stars - a.stars);
+  } else if (sortValue === "reviews") {
+    filtered.sort((a, b) => b.reviews - a.reviews);
+  }
+
+  tableBody.innerHTML = "";
+  filtered.forEach((skill, i) => {
+    const row = document.createElement("tr");
+    const sources = parseSources(skill.resources);
+    const stars = skill.stars || 0;
+    row.innerHTML = `
+      <td>${i + 1}</td>
+      <td>${skill.category}</td>
+      <td>${skill.skill}</td>
+      <td>${skill.level}</td>
+      <td><ul>${sources}</ul></td>
+      <td><input type="checkbox" ${skill.completed ? "checked" : ""}></td>
+      <td>
+        <div class="star-rating">
+          <input type="radio" id="star5-${i}" name="rating-${i}" value="5" ${stars === 5 ? 'checked' : ''}><label for="star5-${i}"></label>
+          <input type="radio" id="star4-${i}" name="rating-${i}" value="4" ${stars === 4 ? 'checked' : ''}><label for="star4-${i}"></label>
+          <input type="radio" id="star3-${i}" name="rating-${i}" value="3" ${stars === 3 ? 'checked' : ''}><label for="star3-${i}"></label>
+          <input type="radio" id="star2-${i}" name="rating-${i}" value="2" ${stars === 2 ? 'checked' : ''}><label for="star2-${i}"></label>
+          <input type="radio" id="star1-${i}" name="rating-${i}" value="1" ${stars === 1 ? 'checked' : ''}><label for="star1-${i}"></label>
+        </div>
+      </td>
+      <td><input type="number" min="0" max="99" value="${skill.reviews || 0}"></td>
+      <td>${skill.priority}</td>
+    `;
+    tableBody.appendChild(row);
+  });
+  attachEvents();
+  saveToLocal();
+}
+
+function attachEvents() {
+  tableBody.querySelectorAll("input[type=checkbox]").forEach((cb, i) => {
+    cb.addEventListener("change", e => {
+      skills[i].completed = e.target.checked;
+      saveToLocal();
+      renderTable();
+    });
+  });
+  tableBody.querySelectorAll(".star-rating input").forEach(input => {
+    input.addEventListener("change", e => {
+      const index = parseInt(e.target.name.split('-')[1]);
+      skills[index].stars = parseInt(e.target.value);
+      saveToLocal();
+      renderTable();
+    });
+  });
+  tableBody.querySelectorAll("input[type=number]").forEach((num, i) => {
+    num.addEventListener("change", e => {
+      let value = Number(e.target.value);
+      if (value < 0) value = 0;
+      if (value > 99) value = 99;
+      skills[i].reviews = value;
+      saveToLocal();
+      renderTable();
+    });
+  });
+}
+
+function updateCategoryOptions() {
+  const cats = [...new Set(skills.map(s => s.category).filter(c => c))];
+  filterCategory.innerHTML = `<option value="">فیلتر دسته‌بندی</option>` + cats.map(c => `<option value="${c}">${c}</option>`).join("");
+}
+
+searchInput.addEventListener("input", () => renderTable());
+filterCategory.addEventListener("change", () => renderTable());
+filterLevel.addEventListener("change", () => renderTable());
+sortBy.addEventListener("change", () => renderTable());
+
+document.getElementById("btnExport").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify(skills, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "skills.json";
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+document.getElementById("btnImport").addEventListener("click", () => document.getElementById("fileImport").click());
+document.getElementById("fileImport").addEventListener("change", e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = event => {
+    skills = JSON.parse(event.target.result);
+    skills = skills.map(skill => ({
+      ...skill,
+      "completed": Boolean(skill["completed"]),
+      "stars": Number(skill["stars"]) || 0,
+      "reviews": Number(skill["reviews"]) || 0
+    }));
+    updateCategoryOptions();
+    renderTable();
+  };
+  reader.readAsText(file);
+});
+
+document.getElementById("btnClearStorage").addEventListener("click", () => {
+  if (confirm("آیا مطمئن هستید که می‌خواهید تمام داده‌های ذخیره‌شده را حذف کنید؟ این عمل قابل بازگشت نیست.")) {
+    localStorage.removeItem(STORAGE_KEY);
+    skills = [];
+    updateCategoryOptions();
+    renderTable();
+  }
+});
+
+document.getElementById("btnSampleJson").addEventListener("click", () => {
+  const sampleJson = [
+    {
+      "category": "PHP & OOP",
+      "skill": "OOP Principles (Class, Inheritance, Interfaces, Traits)",
+      "level": "Mid",
+      "resources": [{"title": "📘 Laravel Docs", "url": "https://laravel.com/docs"}, {"title": "📹 Tutorial", "url": "https://youtube.com"}],
+      "completed": false,
+      "stars": 0,
+      "reviews": 0,
+      "priority": "Essential"
+    }
+  ];
+  const blob = new Blob([JSON.stringify(sampleJson, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "sample-skills.json";
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+// Help Modal
+const helpModal = document.getElementById("helpModal");
+document.getElementById("btnHelp").addEventListener("click", () => helpModal.style.display = "flex");
+document.getElementById("closeHelp").addEventListener("click", () => helpModal.style.display = "none");
+window.addEventListener("click", e => {
+  if (e.target === helpModal) helpModal.style.display = "none";
+});
+
+loadFromLocal();
+</script>
+
+</body>
+</html>
