@@ -1,0 +1,1655 @@
+[
+  {
+    "category": "PHP Fundamentals",
+    "skill": "Basic Syntax and Variables",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "PHP Tutorial - W3Schools",
+        "url": "https://www.w3schools.com/php/"
+      },
+      {
+        "title": "PHP Full Course for non-haters - YouTube",
+        "url": "https://www.youtube.com/watch?v=zZ6vybT1HQs"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "PHP Fundamentals",
+    "skill": "Control Structures (if, loops, switch)",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "PHP Control Structures - PHP.net",
+        "url": "https://www.php.net/manual/en/language.control-structures.php"
+      },
+      {
+        "title": "PHP Basics Tutorial - Traversy Media YouTube",
+        "url": "https://www.youtube.com/watch?v=OK_JCtrrv-c"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "PHP Fundamentals",
+    "skill": "Functions and Scope",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "PHP Functions - W3Schools",
+        "url": "https://www.w3schools.com/php/php_functions.asp"
+      },
+      {
+        "title": "PHP Functions Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=OK_JCtrrv-c"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "PHP Fundamentals",
+    "skill": "Arrays and Data Structures",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "PHP Arrays - PHP.net",
+        "url": "https://www.php.net/manual/en/language.types.array.php"
+      },
+      {
+        "title": "PHP Arrays Tutorial - freeCodeCamp YouTube",
+        "url": "https://www.youtube.com/watch?v=OK_JCtrrv-c"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "PHP Fundamentals",
+    "skill": "String Manipulation",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "PHP Strings - W3Schools",
+        "url": "https://www.w3schools.com/php/php_string.asp"
+      },
+      {
+        "title": "PHP String Functions - YouTube",
+        "url": "https://www.youtube.com/watch?v=OK_JCtrrv-c"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "PHP Fundamentals",
+    "skill": "File Handling",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "PHP File Handling - PHP.net",
+        "url": "https://www.php.net/manual/en/ref.filesystem.php"
+      },
+      {
+        "title": "PHP File Upload Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=OK_JCtrrv-c"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "PHP Fundamentals",
+    "skill": "Error Handling and Exceptions",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "PHP Error Handling - PHP.net",
+        "url": "https://www.php.net/manual/en/language.exceptions.php"
+      },
+      {
+        "title": "PHP Exceptions Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=yrFr5PMdk2A"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "PHP OOP",
+    "skill": "OOP Principles (Classes, Objects, Inheritance)",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Object Oriented PHP Tutorials - YouTube Playlist",
+        "url": "https://www.youtube.com/playlist?list=PL0eyrZgxdwhypQiZnYXM7z7-OTkcMgGPh"
+      },
+      {
+        "title": "OOP in PHP - PHP.net",
+        "url": "https://www.php.net/manual/en/language.oop5.php"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "PHP OOP",
+    "skill": "Encapsulation and Access Modifiers",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "PHP OOP Encapsulation - KillerPHP",
+        "url": "https://www.killerphp.com/articles/object-oriented-php-objects-page-3/"
+      },
+      {
+        "title": "OOP PHP Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=yrFr5PMdk2A"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "PHP OOP",
+    "skill": "Polymorphism and Interfaces",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "PHP Interfaces - PHP.net",
+        "url": "https://www.php.net/manual/en/language.oop5.interfaces.php"
+      },
+      {
+        "title": "PHP Polymorphism Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=uUlLAfN3rJc"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "PHP OOP",
+    "skill": "Abstract Classes and Traits",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "PHP Traits - PHP.net",
+        "url": "https://www.php.net/manual/en/language.oop5.traits.php"
+      },
+      {
+        "title": "PHP Abstract Classes Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=LuWxwLk8StM"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "PHP OOP",
+    "skill": "Namespaces and Autoloading",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "PHP Namespaces - PHP.net",
+        "url": "https://www.php.net/manual/en/language.namespaces.php"
+      },
+      {
+        "title": "PHP Namespaces Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=yrFr5PMdk2A"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "PHP OOP",
+    "skill": "Magic Methods and Overloading",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "PHP Magic Methods - PHP.net",
+        "url": "https://www.php.net/manual/en/language.oop5.magic.php"
+      },
+      {
+        "title": "PHP Magic Methods Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=uUlLAfN3rJc"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "PHP OOP",
+    "skill": "Dependency Injection",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "PHP Dependency Injection - Article",
+        "url": "https://www.php.net/manual/en/language.oop5.php"
+      },
+      {
+        "title": "Dependency Injection in PHP - YouTube",
+        "url": "https://www.youtube.com/watch?v=yrFr5PMdk2A"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Laravel Fundamentals",
+    "skill": "Laravel Installation and Setup",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Laravel Installation Docs",
+        "url": "https://laravel.com/docs/12.x/installation"
+      },
+      {
+        "title": "Laravel Tutorial for Beginners - YouTube",
+        "url": "https://www.youtube.com/watch?v=DKnn8TlJ4MA"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Laravel Fundamentals",
+    "skill": "Routing and Controllers",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Laravel Routing Docs",
+        "url": "https://laravel.com/docs/12.x/routing"
+      },
+      {
+        "title": "Resource Routing Explained - YouTube",
+        "url": "https://www.youtube.com/watch?v=0vlK1DIdQId"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Laravel Fundamentals",
+    "skill": "Blade Templating",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Laravel Blade Docs",
+        "url": "https://laravel.com/docs/12.x/blade"
+      },
+      {
+        "title": "Laravel Blade Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=0M84Nk7iWkA"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Laravel Fundamentals",
+    "skill": "Eloquent ORM Basics",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Eloquent ORM Docs",
+        "url": "https://laravel.com/docs/12.x/eloquent"
+      },
+      {
+        "title": "Laravel Eloquent Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=eUNWzJUvkCA"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Laravel Fundamentals",
+    "skill": "Migrations and Seeding",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Laravel Migrations Docs",
+        "url": "https://laravel.com/docs/12.x/migrations"
+      },
+      {
+        "title": "Laravel Migrations Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=0M84Nk7iWkA"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Laravel Fundamentals",
+    "skill": "Form Validation",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Laravel Validation Docs",
+        "url": "https://laravel.com/docs/12.x/validation"
+      },
+      {
+        "title": "Laravel Validation Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=SqTdHCTWqks"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Laravel Fundamentals",
+    "skill": "Authentication Basics",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Laravel Authentication Docs",
+        "url": "https://laravel.com/docs/12.x/authentication"
+      },
+      {
+        "title": "Laravel Auth Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=99Hz1DlyLcQ"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Laravel Advanced",
+    "skill": "Middleware",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel Middleware Docs",
+        "url": "https://laravel.com/docs/12.x/middleware"
+      },
+      {
+        "title": "Laravel Middleware Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=DP7jdxUUmeg"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Laravel Advanced",
+    "skill": "Eloquent Relationships (One-to-One, One-to-Many, Many-to-Many)",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Eloquent Relationships Docs",
+        "url": "https://laravel.com/docs/12.x/eloquent-relationships"
+      },
+      {
+        "title": "Laravel Relationships Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Laravel Advanced",
+    "skill": "Queues and Jobs",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Laravel Queues Docs",
+        "url": "https://laravel.com/docs/12.x/queues"
+      },
+      {
+        "title": "Laravel Queues Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=SqTdHCTWqks"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Laravel Advanced",
+    "skill": "Events and Listeners",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Laravel Events Docs",
+        "url": "https://laravel.com/docs/12.x/events"
+      },
+      {
+        "title": "Laravel Events Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=0M84Nk7iWkA"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Laravel Advanced",
+    "skill": "Service Providers and Containers",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Laravel Service Container Docs",
+        "url": "https://laravel.com/docs/12.x/container"
+      },
+      {
+        "title": "Laravel Service Providers Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=35kfT5FHJpY"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Laravel Advanced",
+    "skill": "Caching (Config, Route, View)",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Laravel Caching Docs",
+        "url": "https://laravel.com/docs/12.x/cache"
+      },
+      {
+        "title": "Laravel Performance Optimization - Article",
+        "url": "https://www.honeybadger.io/blog/optimize-laravel/"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Laravel Advanced",
+    "skill": "Notifications and Mail",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel Notifications Docs",
+        "url": "https://laravel.com/docs/12.x/notifications"
+      },
+      {
+        "title": "Laravel Mail Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Database Management",
+    "skill": "SQL Basics (SELECT, INSERT, UPDATE, DELETE)",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "SQL Tutorial - W3Schools",
+        "url": "https://www.w3schools.com/sql/"
+      },
+      {
+        "title": "SQL Basics Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=7Vtl2WggqG8"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Database Management",
+    "skill": "Database Design and Normalization",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Database Normalization - Article",
+        "url": "https://www.guru99.com/database-normalization.html"
+      },
+      {
+        "title": "Database Design Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=NvrpuBAMddw"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Database Management",
+    "skill": "MySQL/PostgreSQL Administration",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "MySQL Docs",
+        "url": "https://dev.mysql.com/doc/"
+      },
+      {
+        "title": "PostgreSQL Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=qw--VYLpxG4"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Database Management",
+    "skill": "Indexing and Query Optimization",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "MySQL Indexing - Article",
+        "url": "https://dev.mysql.com/doc/refman/8.0/en/optimization-indexes.html"
+      },
+      {
+        "title": "Query Optimization Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=S48HNI_j0d4"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Database Management",
+    "skill": "NoSQL Databases (e.g., Redis, MongoDB)",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "Redis Docs",
+        "url": "https://redis.io/docs/"
+      },
+      {
+        "title": "MongoDB Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=ExcLS9agS9Y"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Web Fundamentals",
+    "skill": "HTML Basics",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "HTML Tutorial - W3Schools",
+        "url": "https://www.w3schools.com/html/"
+      },
+      {
+        "title": "HTML Full Course - YouTube",
+        "url": "https://www.youtube.com/watch?v=kAiIdIdQId"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Web Fundamentals",
+    "skill": "CSS Basics and Selectors",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "CSS Tutorial - W3Schools",
+        "url": "https://www.w3schools.com/css/"
+      },
+      {
+        "title": "CSS Crash Course - YouTube",
+        "url": "https://www.youtube.com/watch?v=yfoY53QXEnI"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Web Fundamentals",
+    "skill": "JavaScript Basics (Variables, Functions, DOM)",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "JavaScript Tutorial - W3Schools",
+        "url": "https://www.w3schools.com/js/"
+      },
+      {
+        "title": "JavaScript Full Course - YouTube",
+        "url": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Web Fundamentals",
+    "skill": "Responsive Design with CSS Media Queries",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Responsive Web Design - freeCodeCamp",
+        "url": "https://www.freecodecamp.org/learn/responsive-web-design/"
+      },
+      {
+        "title": "Responsive Design Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=x4uNNnuN8vI"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Web Fundamentals",
+    "skill": "CSS Frameworks (Bootstrap, Tailwind)",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Bootstrap Docs",
+        "url": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+      },
+      {
+        "title": "Tailwind CSS Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=UBOj6rqR2fA"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Frontend Frameworks",
+    "skill": "Vue.js Basics",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Vue.js Docs",
+        "url": "https://vuejs.org/guide/introduction.html"
+      },
+      {
+        "title": "Vue.js Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=YrxBCBibU0g"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Frontend Frameworks",
+    "skill": "React Basics",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "React Docs",
+        "url": "https://react.dev/learn"
+      },
+      {
+        "title": "React Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=SqcY0GlETPk"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Frontend Frameworks",
+    "skill": "Inertia.js with Laravel",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Inertia.js Docs",
+        "url": "https://inertiajs.com/"
+      },
+      {
+        "title": "Laravel Inertia Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=rt1it3dN3ig"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "API Development",
+    "skill": "RESTful API Design",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel API Resources Docs",
+        "url": "https://laravel.com/docs/12.x/eloquent-resources"
+      },
+      {
+        "title": "Laravel API Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=99Hz1DlyLcQ"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "API Development",
+    "skill": "GraphQL with Laravel (Lighthouse)",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Lighthouse GraphQL Docs",
+        "url": "https://lighthouse-php.com/"
+      },
+      {
+        "title": "GraphQL with Laravel Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=rt1it3dN3ig"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "API Development",
+    "skill": "API Authentication (Sanctum, Passport)",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel Sanctum Docs",
+        "url": "https://laravel.com/docs/12.x/sanctum"
+      },
+      {
+        "title": "Laravel API Auth Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=XIdIdQId"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "API Development",
+    "skill": "Rate Limiting and Throttling",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Laravel Rate Limiting Docs",
+        "url": "https://laravel.com/docs/12.x/routing#rate-limiting"
+      },
+      {
+        "title": "Laravel Rate Limiting Tutorial - Article",
+        "url": "https://laravel.com/docs/12.x/routing#rate-limiting"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Security",
+    "skill": "SQL Injection Prevention",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "OWASP Laravel Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/Laravel_Cheat_Sheet.html"
+      },
+      {
+        "title": "Laravel Security Best Practices - Article",
+        "url": "https://benjamincrozat.com/laravel-security-best-practices"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Security",
+    "skill": "CSRF and XSS Protection",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel CSRF Docs",
+        "url": "https://laravel.com/docs/12.x/csrf"
+      },
+      {
+        "title": "Laravel Security Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=rt1it3dN3ig"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Security",
+    "skill": "Authentication and Authorization (Gates, Policies)",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel Authorization Docs",
+        "url": "https://laravel.com/docs/12.x/authorization"
+      },
+      {
+        "title": "Laravel Policies Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=ad7513798cfb"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Security",
+    "skill": "Encryption and Hashing",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel Encryption Docs",
+        "url": "https://laravel.com/docs/12.x/encryption"
+      },
+      {
+        "title": "Laravel Hashing Tutorial - Article",
+        "url": "https://laravel.com/docs/12.x/hashing"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Security",
+    "skill": "Secure File Uploads",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel File Storage Docs",
+        "url": "https://laravel.com/docs/12.x/filesystem"
+      },
+      {
+        "title": "Secure Uploads Best Practices - Article",
+        "url": "https://pentest-tools.com/blog/laravel-application-security-guide"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Security",
+    "skill": "HTTPS and SSL Configuration",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Enforce HTTPS in Laravel - Article",
+        "url": "https://saasykit.com/blog/12-top-security-best-practices-for-your-laravel-application"
+      },
+      {
+        "title": "SSL Setup Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=rt1it3dN3ig"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Security",
+    "skill": "Security Auditing and Penetration Testing",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "OWASP Top 10",
+        "url": "https://owasp.org/www-project-top-ten/"
+      },
+      {
+        "title": "Laravel Security Audit - Reddit",
+        "url": "https://www.reddit.com/r/laravel/comments/1l6i2r0/getting_my_laravel_application_security_audited/"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Testing",
+    "skill": "Unit Testing with PHPUnit",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel Testing Docs",
+        "url": "https://laravel.com/docs/12.x/testing"
+      },
+      {
+        "title": "Laravel Unit Testing Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Testing",
+    "skill": "Feature Testing",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel Feature Tests Docs",
+        "url": "https://laravel.com/docs/12.x/http-tests"
+      },
+      {
+        "title": "Laravel Feature Testing Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Testing",
+    "skill": "Integration Testing",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Integration Testing in Laravel - Article",
+        "url": "https://engineering.teknasyon.com/integration-testing-laravel-application-taking-tdd-approach-bae45c545aac"
+      },
+      {
+        "title": "Laravel Integration Testing - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Testing",
+    "skill": "TDD (Test-Driven Development)",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "TDD in Laravel - Article",
+        "url": "https://laracasts.com/series/laravel-testing-decoded"
+      },
+      {
+        "title": "TDD Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Testing",
+    "skill": "Browser Testing with Dusk",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Laravel Dusk Docs",
+        "url": "https://laravel.com/docs/12.x/dusk"
+      },
+      {
+        "title": "Laravel Dusk Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Performance Optimization",
+    "skill": "Query Optimization and Eager Loading",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel Performance Guide - Honeybadger",
+        "url": "https://www.honeybadger.io/blog/optimize-laravel/"
+      },
+      {
+        "title": "Eager Loading Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Performance Optimization",
+    "skill": "Caching Strategies",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Ultimate Laravel Performance Guide - Cloudways",
+        "url": "https://www.cloudways.com/blog/laravel-performance-optimization/"
+      },
+      {
+        "title": "Laravel Caching Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Performance Optimization",
+    "skill": "Profiling with Debugbar",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel Debugbar - GitHub",
+        "url": "https://github.com/barryvdh/laravel-debugbar"
+      },
+      {
+        "title": "Debugbar Tutorial - Article",
+        "url": "https://newrelic.com/blog/best-practices/improve-laravel-performance"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Performance Optimization",
+    "skill": "Load Balancing and Scaling",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "Laravel Scaling Guide - Article",
+        "url": "https://www.cloudways.com/blog/laravel-performance-optimization/"
+      },
+      {
+        "title": "Scaling Laravel Apps - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Performance Optimization",
+    "skill": "OPcache and JIT Compilation",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "PHP OPcache - PHP.net",
+        "url": "https://www.php.net/manual/en/book.opcache.php"
+      },
+      {
+        "title": "Laravel Performance with OPcache - Article",
+        "url": "https://saasykit.com/blog/optimizing-laravel-performance-for-high-traffic-saas-applications"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Design Patterns",
+    "skill": "MVC Pattern",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "MVC in Laravel - Article",
+        "url": "https://medium.com/@imgrasool/typical-design-patterns-for-laravel-application-development-b97f1ee5fd6b"
+      },
+      {
+        "title": "MVC Explained - YouTube",
+        "url": "https://www.youtube.com/watch?v=wHrkL2SKjjk"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Design Patterns",
+    "skill": "Singleton Pattern",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Singleton in PHP - Refactoring Guru",
+        "url": "https://refactoring.guru/design-patterns/singleton/php/example"
+      },
+      {
+        "title": "Singleton Pattern Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=wHrkL2SKjjk"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Design Patterns",
+    "skill": "Factory Pattern",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Factory Pattern in PHP - Refactoring Guru",
+        "url": "https://refactoring.guru/design-patterns/factory-method/php/example"
+      },
+      {
+        "title": "Factory Pattern in Laravel - YouTube",
+        "url": "https://www.youtube.com/watch?v=35kfT5FHJpY"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Design Patterns",
+    "skill": "Repository Pattern",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Repository Pattern in Laravel - Laracasts",
+        "url": "https://laracasts.com/discuss/channels/laravel/laravel-design-patterns"
+      },
+      {
+        "title": "Repository Pattern Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=35kfT5FHJpY"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Design Patterns",
+    "skill": "Strategy Pattern",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "Strategy Pattern in Laravel - YouTube",
+        "url": "https://www.youtube.com/watch?v=35kfT5FHJpY"
+      },
+      {
+        "title": "Strategy Pattern - Refactoring Guru",
+        "url": "https://refactoring.guru/design-patterns/strategy/php/example"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Design Patterns",
+    "skill": "Builder Pattern",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Builder Pattern in Laravel - Laravel Daily",
+        "url": "https://laraveldaily.com/post/design-patterns-laravel-builder-example"
+      },
+      {
+        "title": "Builder Pattern Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=wHrkL2SKjjk"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "DevOps",
+    "skill": "CI/CD Pipelines with GitHub Actions",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Laravel CI/CD Guide - Redberry",
+        "url": "https://redberry.international/creating-ci-cd-pipeline-for-laravel-project/"
+      },
+      {
+        "title": "Laravel CI/CD Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=hk8m7Lxmbv8"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "DevOps",
+    "skill": "Docker for Laravel",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "DevOps with Laravel - Book",
+        "url": "https://devops-with-laravel.io/"
+      },
+      {
+        "title": "Docker Laravel Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=YQsHMbbcIBo"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "DevOps",
+    "skill": "Deployment with Forge/Vapor/Envoyer",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Laravel Forge Docs",
+        "url": "https://forge.laravel.com/"
+      },
+      {
+        "title": "Laravel Deployment Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=YQsHMbbcIBo"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "DevOps",
+    "skill": "Kubernetes for Laravel",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "DevOps with Laravel - Kubernetes",
+        "url": "https://devops-with-laravel.io/"
+      },
+      {
+        "title": "Kubernetes Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=X48VuDVv0do"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Tools",
+    "skill": "Git Version Control",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Git Tutorial - Atlassian",
+        "url": "https://www.atlassian.com/git/tutorials"
+      },
+      {
+        "title": "Git Full Course - YouTube",
+        "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Tools",
+    "skill": "Composer Dependency Management",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Composer Docs",
+        "url": "https://getcomposer.org/doc/"
+      },
+      {
+        "title": "Composer Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=OK_JCtrrv-c"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Tools",
+    "skill": "Laravel Artisan Commands",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Artisan Docs",
+        "url": "https://laravel.com/docs/12.x/artisan"
+      },
+      {
+        "title": "Artisan Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=0M84Nk7iWkA"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Tools",
+    "skill": "PHPStorm IDE",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "PHPStorm for Laravel - JetBrains",
+        "url": "https://www.jetbrains.com/phpstorm/"
+      },
+      {
+        "title": "PHPStorm Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=5Riul83dncQ"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Tools",
+    "skill": "Postman for API Testing",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Postman Docs",
+        "url": "https://learning.postman.com/docs/getting-started/introduction/"
+      },
+      {
+        "title": "Postman Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=VywxIQ2ZXw4"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Soft Skills",
+    "skill": "Communication",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Soft Skills for Developers - Article",
+        "url": "https://www.terminal.io/blog/beyond-code-the-power-of-soft-skills-for-software-engineers"
+      },
+      {
+        "title": "Communication Skills Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=061f74dfk5d"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Soft Skills",
+    "skill": "Problem-Solving",
+    "level": "Junior",
+    "resources": [
+      {
+        "title": "Problem-Solving for Developers - Article",
+        "url": "https://dev.to/teamcamp/from-junior-to-senior-the-skills-roadmap-no-one-talks-about-18fn"
+      },
+      {
+        "title": "Problem-Solving Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=061f74dfk5d"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Essential"
+  },
+  {
+    "category": "Soft Skills",
+    "skill": "Teamwork and Collaboration",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Teamwork Skills - Article",
+        "url": "https://www.codepath.org/news/engineer-soft-skills"
+      },
+      {
+        "title": "Collaboration Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=061f74dfk5d"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Soft Skills",
+    "skill": "Time Management",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Time Management for Developers - Article",
+        "url": "https://zerotomastery.io/blog/dont-be-a-junior-developer-the-roadmap/"
+      },
+      {
+        "title": "Time Management Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=061f74dfk5d"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Soft Skills",
+    "skill": "Technical Interview Preparation",
+    "level": "Mid/Senior",
+    "resources": [
+      {
+        "title": "Laravel Interview Questions - Simplilearn",
+        "url": "https://www.simplilearn.com/laravel-interview-questions-answers-article"
+      },
+      {
+        "title": "Interview Prep - YouTube",
+        "url": "https://www.youtube.com/watch?v=WNkNZbKsrH0"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Complementary Frameworks",
+    "skill": "Symfony Components",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "Symfony Docs",
+        "url": "https://symfony.com/doc/current/index.html"
+      },
+      {
+        "title": "Symfony Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=4h0IdId"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Complementary Frameworks",
+    "skill": "Vue.js Integration with Laravel",
+    "level": "Mid",
+    "resources": [
+      {
+        "title": "Laravel Vue Docs",
+        "url": "https://laravel.com/docs/12.x/vite#vue"
+      },
+      {
+        "title": "Laravel Vue Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=4h0IdId"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Important"
+  },
+  {
+    "category": "Cloud Services",
+    "skill": "AWS Services (EC2, S3, RDS)",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "AWS for Laravel - Vapor",
+        "url": "https://vapor.laravel.com/"
+      },
+      {
+        "title": "AWS Laravel Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=YQsHMbbcIBo"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Cloud Services",
+    "skill": "Azure Web Apps and Databases",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "Azure for Laravel - Article",
+        "url": "https://cypressnorth.com/web-programming-and-development/how-to-run-a-laravel-application-with-reverb-in-an-azure-web-app/"
+      },
+      {
+        "title": "Azure Deployment Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=kkPwoXcwruI"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  },
+  {
+    "category": "Cloud Services",
+    "skill": "Google Cloud Platform Basics",
+    "level": "Senior",
+    "resources": [
+      {
+        "title": "GCP for Developers - Docs",
+        "url": "https://cloud.google.com/developers"
+      },
+      {
+        "title": "GCP Tutorial - YouTube",
+        "url": "https://www.youtube.com/watch?v=kkPwoXcwruI"
+      }
+    ],
+    "completed": false,
+    "stars": 0,
+    "reviews": 0,
+    "priority": "Advanced"
+  }
+]
